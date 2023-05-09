@@ -7,7 +7,7 @@
     "license": "MIT",
     "extra": {
     "installer-paths": {
-        "modules/contrib/{$name}": ["type:drupal-module"],
+        "modules/contrib/{$name}": ["type:drupal-module"]
       }
     }
 }
