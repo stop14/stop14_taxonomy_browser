@@ -1,0 +1,13 @@
+/**
+ *  @file Edge Padding Mixin
+ *  @group 10_layout
+ *  @description Sets a standard exterior edge padding for an element.
+ *   Based on $mobile_edge_padding_factor and $edge_padding_factor
+ *
+ */
+
+=standard_edge_padding()
+  padding: rv($mobile_edge_padding_factor)
+
+  +bp($desktop)
+    padding: rv($edge_padding_factor)

@@ -1,0 +1,16 @@
+a
+  color: $link_colour
+  cursor: pointer
+  text-decoration: none
+  display: inline
+  +transition(all,-6)
+
+  &:hover, &:active
+    +link-underline()
+
+// Default for links in body paragraphs.
+
+main
+  p > a
+   a
+    +inline-text-link()

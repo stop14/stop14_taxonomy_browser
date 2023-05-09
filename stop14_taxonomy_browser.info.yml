@@ -1,0 +1,9 @@
+name: Taxonomy Browser
+type: module
+description: Creates a specialized user interface to navigate multi-level taxonomies.
+package: Stop14
+core_version_requirement: ^9 || ^10
+dependencies:
+  - views
+  - rest
+  - restui

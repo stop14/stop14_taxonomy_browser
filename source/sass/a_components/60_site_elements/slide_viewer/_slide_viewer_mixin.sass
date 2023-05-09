@@ -1,0 +1,19 @@
+/**
+ * @file _slide_viewer_mixin.sass
+ *
+ * Sets CSS variables for use in the Agile Slide Viewer web component.
+ *
+ *
+ */
+
+=slide-viewer($idx)
+  @if $idx == 1
+    +slide-viewer-template-1()
+  @else if $idx == 2
+    +slide-viewer-template-2()
+  @else if $idx == 3
+    +slide-viewer-template-3()
+  @else if $idx == 4
+    +slide-viewer-template-4()
+
+

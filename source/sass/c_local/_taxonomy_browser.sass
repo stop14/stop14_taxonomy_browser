@@ -1,0 +1,78 @@
+.tb-track
+  width: 100%
+  height: 80vh
+  max-height: 100vh
+  overflow: scroll
+
+  +bp($tablet)
+    height: 60vh
+    max-height: 60vh
+
+
+.taxonomy-browser
+  display: flex
+  flex-direction: row
+  justify-content: flex-start
+  align-items: stretch
+  min-height: 100%
+  +font-size(0)
+
+  > *
+    width: 100%
+    min-height: 100%
+    flex-shrink: 0
+    flex-grow: 0
+    margin-right: rv(0)
+
+    +bp($tablet)
+      width: 33.33%
+
+    +bp($desktop)
+      width: 25%
+
+    +bp($ultrawide)
+      width: 20%
+
+  ul
+    list-style-type: none
+    padding-left: 0
+
+  li
+    margin-bottom: rv(-2)
+
+  ul.tb-content-list
+    li
+      font-style: italic
+    a
+      text-decoration: underline
+      text-underline-offset: 2px
+
+  a.active
+    color: $impact
+    margin-right: rv(-2)
+
+    &:after
+      content: ' >'
+
+  header
+    min-height: rv(1)
+
+  .tb-group-label
+    font-weight: $bold
+    display: inline
+
+  .tb-back
+    height: 20px
+    &:before
+      content: '<'
+
+    +bp($tablet)
+      display: none
+
+    + .tb-group-label
+      display: inline
+
+    &:hover
+      color: $impact
+      text-decoration: none
+

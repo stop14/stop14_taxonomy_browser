@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Default theme implementation for taxonomy content lists.
+ *
+ * Available variables:
+ * - items: The items within the tree tree list.
+ *
+ */
+#}
+<div class="term-content-list">
+  {% for item in items %}
+    {{ item }}
+  {% endfor %}
+</div>

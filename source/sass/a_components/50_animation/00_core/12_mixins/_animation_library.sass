@@ -1,0 +1,332 @@
+/*
+ @file _standard_transition.sass
+ @category 50_animation
+ @group a_components
+ @description  A growing library of mixins that use the standard keyframe library to animate elements. */
+
+=animationBase($duration: $slow, $delay: $slow, $function: ease)
+  animation-iteration-count: 1
+  animation-duration: $duration
+  -webkit-animation-delay: $delay
+  animation-delay: $delay
+  animation-timing-function: $function
+  animation-fill-mode: both
+  backface-visibility: hidden
+
+=bounceIn($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceIn
+  +animationBase($duration,$delay,$function)
+
+=bounceInDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceInDown
+  +animationBase($duration,$delay,$function)
+
+=bounceInLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceInLeft
+  +animationBase($duration,$delay,$function)
+
+=bounceInRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceInRight
+  +animationBase($duration,$delay,$function)
+
+=bounceInUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceInUp
+  +animationBase($duration,$delay,$function)
+
+=bounceOut($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceOut
+  +animationBase($duration,$delay,$function)
+
+=bounceOutDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceOutDown
+  +animationBase($duration,$delay,$function)
+
+=bounceOutLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceOutLeft
+  +animationBase($duration,$delay,$function)
+
+=bounceOutRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceOutRight
+  +animationBase($duration,$delay,$function)
+
+=bounceOutUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounceOutUp
+  +animationBase($duration,$delay,$function)
+
+
+=fader($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fader
+  +animationBase($duration,$delay,$function)
+
+=bounce($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: bounce
+  +animationBase($duration,$delay,$function)
+
+=fadeIn($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeIn
+  +animationBase($duration,$delay,$function)
+
+=fadeInDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInDown
+  +animationBase($duration,$delay,$function)
+
+=fadeInDownBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInDownBig
+  +animationBase($duration,$delay,$function)
+
+=fadeInUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInUp
+  +animationBase($duration,$delay,$function)
+
+=fadeInUpBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInUpBig
+  +animationBase($duration,$delay,$function)
+
+=fadeInLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInLeft
+  +animationBase($duration,$delay,$function)
+
+=fadeInLeftBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInLeftBig
+  +animationBase($duration,$delay,$function)
+
+=fadeInRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInRight
+  +animationBase($duration,$delay,$function)
+
+=fadeInRightBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInRightBig
+  +animationBase($duration,$delay,$function)
+
+=fadeInUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInUp
+  +animationBase($duration,$delay,$function)
+
+=fadeInUpBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeInUpBig
+  +animationBase($duration,$delay,$function)
+
+=fadeOut($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOut
+  +animationBase($duration,$delay,$function)
+
+=fadeOutDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutDown
+  +animationBase($duration,$delay,$function)
+
+=fadeOutDownBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutDownBig
+  +animationBase($duration,$delay,$function)
+
+=fadeOutLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutLeft
+  +animationBase($duration,$delay,$function)
+
+=fadeOutLeftBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutLeftBig
+  +animationBase($duration,$delay,$function)
+
+=fadeOutRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutRight
+  +animationBase($duration,$delay,$function)
+
+=fadeOutRightBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutRightBig
+  +animationBase($duration,$delay,$function)
+
+=fadeOutUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutUp
+  +animationBase($duration,$delay,$function)
+
+=fadeOutUpBig($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: fadeOutUpBig
+  +animationBase($duration,$delay,$function)
+
+=flash($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: flash
+  +animationBase($duration,$delay,$function)
+
+=flip($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: flip
+  +animationBase($duration,$delay,$function)
+
+=flipInX($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: flipInX
+  +animationBase($duration,$delay,$function)
+
+=flipInY($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: flipInY
+  +animationBase($duration,$delay,$function)
+
+=flipOutX($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: flipOutX
+  +animationBase($duration,$delay,$function)
+
+=flipOutY($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: flipOutY
+  +animationBase($duration,$delay,$function)
+
+=hinge($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: hinge
+  +animationBase($duration,$delay,$function)
+
+=jello($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: jello
+  +animationBase($duration,$delay,$function)
+
+=lightSpeedIn($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: lightSpeedIn
+  +animationBase($duration,$delay,$function)
+
+=lightSpeedOut($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: lightSpeedOut
+  +animationBase($duration,$delay,$function)
+
+=pulse($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: pulse
+  +animationBase($duration,$delay,$function)
+
+=rollIn($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rollIn
+  +animationBase($duration,$delay,$function)
+
+=rollOut($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rollOut
+  +animationBase($duration,$delay,$function)
+
+=rotateIn($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateIn
+  +animationBase($duration,$delay,$function)
+
+=rotateInDownLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateInDownLeft
+  +animationBase($duration,$delay,$function)
+
+=rotateInDownRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateInDownRight
+  +animationBase($duration,$delay,$function)
+
+=rotateInUpLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateInUpLeft
+  +animationBase($duration,$delay,$function)
+
+=rotateInUpRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateInUpRight
+  +animationBase($duration,$delay,$function)
+
+=rotateOut($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateOut
+  +animationBase($duration,$delay,$function)
+
+=rotateOutDownLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateOutDownLeft
+  +animationBase($duration,$delay,$function)
+
+=rotateOutDownRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateOutDownRight
+  +animationBase($duration,$delay,$function)
+
+=rotateOutUpLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateOutUpLeft
+  +animationBase($duration,$delay,$function)
+
+=rotateOutUpRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateOutUpRight
+  +animationBase($duration,$delay,$function)
+
+=rotateOutUpRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: rotateOutUpRight
+  +animationBase($duration,$delay,$function)
+
+=shake($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: shake
+  +animationBase($duration,$delay,$function)
+
+=slideInDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideInDown
+  +animationBase($duration,$delay,$function)
+
+=slideInLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideInLeft
+  +animationBase($duration,$delay,$function)
+
+=slideInRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideInRight
+  +animationBase($duration,$delay,$function)
+
+=slideInUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideInUp
+  +animationBase($duration,$delay,$function)
+
+=slideOutDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideOutDown
+  +animationBase($duration,$delay,$function)
+
+=slideOutLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideOutLeft
+  +animationBase($duration,$delay,$function)
+
+=slideOutRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideOutRight
+  +animationBase($duration,$delay,$function)
+
+=slideOutUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: slideOutUp
+  +animationBase($duration,$delay,$function)
+
+=swing($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: swing
+  +animationBase($duration,$delay,$function)
+
+=tada($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: tada
+  +animationBase($duration,$delay,$function)
+
+=wobble($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: wobble
+  +animationBase($duration,$delay,$function)
+
+=zoomIn($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomIn
+  +animationBase($duration,$delay,$function)
+
+=zoomInDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomInDown
+  +animationBase($duration,$delay,$function)
+
+=zoomInLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomInLeft
+  +animationBase($duration,$delay,$function)
+
+=zoomInRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomInRight
+  +animationBase($duration,$delay,$function)
+
+=zoomInUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomInUp
+  +animationBase($duration,$delay,$function)
+
+=zoomOut($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomOut
+  +animationBase($duration,$delay,$function)
+
+=zoomOutDown($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomOutDown
+  +animationBase($duration,$delay,$function)
+
+=zoomOutLeft($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomOutLeft
+  +animationBase($duration,$delay,$function)
+
+=zoomOutRight($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomOutRight
+  +animationBase($duration,$delay,$function)
+
+=zoomOutUp($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: zoomOutUp
+  +animationBase($duration,$delay,$function)
+
+=scaleBg($duration: $slow, $delay: $slow, $function: ease)
+  animation-name: scaleBg
+  +animationBase($duration,$delay,$function)
+

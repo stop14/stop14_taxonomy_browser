@@ -1,0 +1,8 @@
+stop14_taxonomy_browser.taxonomy_viewer:
+  path: '/topics/entries/{rendertype}'
+  defaults:
+    _controller: '\Drupal\stop14_taxonomy_browser\Controller\StaticTopicalEntryViewer::EntriesByTopics'
+    _title: 'Entries by Topics'
+    rendertype: 'static'
+  requirements:
+    _permission: 'access content'

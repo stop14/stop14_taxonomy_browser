@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for SGSE Site Support module.
+ */
+
+define('TAXONOMY_BROWSER_ENDPOINT_ROUTE','/rest');
+
+function stop14_taxonomy_browser_theme() {
+
+  return [
+    'entries_by_topics_static_cache' => [
+      'render element' => 'children',
+      'template' => 'static/entry-by-topics-static',
+      'variables' => [
+      ]
+    ],
+    'taxonomy_browser' => [
+      'template' => 'taxonomy-browser',
+      'variables' => [
+        'taxonomy' => '',
+        'endpoint' => TAXONOMY_BROWSER_ENDPOINT_ROUTE,
+        'initialRoute' => ''
+      ]
+    ],
+    'taxonomy_browser_label' => [
+      'template' => 'taxonomy-browser-label',
+      'render element' => 'children',
+      'variables' => [
+        'label' => [],
+      ]
+    ],
+    'taxonomy_browser_term_content_list' => [
+      'template' => 'taxonomy-browser-term-content-list',
+      'render element' => 'element',
+      'variables' => [
+      ]
+    ]
+
+  ];
+
+}
+
+function template_preprocess_taxonomy_browser_term_content_list(&$variables) {
+  dpm($variables);
+}

@@ -1,0 +1,17 @@
+/**
+ * @file _slide_viewer_component.sass
+ *
+ * Sets CSS variables for use in the Agile Slide Item web component.
+ *
+ *
+ */
+
+=slide-item($idx)
+  @if $idx == 1
+    +slide-item-template-1()
+  @else if $idx == 2
+    +slide-item-template-2()
+  @else if $idx == 3
+    +slide-item-template-3()
+  @else if $idx == 4
+    +slide-item-template-4()

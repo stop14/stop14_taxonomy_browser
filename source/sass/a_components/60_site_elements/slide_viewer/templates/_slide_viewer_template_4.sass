@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Slide Viewer Template 4.
+ *
+ * Not (yet) in accompanying schematics. Same as 3, with navigation on top instead of bottom
+ *
+ */
+
+=slide-viewer-template-4()
+  // Pagination slider nav
+  --slide-nav-bottom: auto
+  --slide-nav-top: var(--slide-viewer-padding,#{$slide_viewer_padding})
+  --slide-nav-left: auto
+  --slide-nav-right: calc(var(--slide-viewer-padding,#{$slide_viewer_padding}) + (var(--page-marker-width,#{$page_marker_width}) * 2) + (var(--slide-viewer-ui-spacing,#{$slide_viewer_ui_spacing}) * 2))
+  --slide-nav-flex-direction: row
+  --slide-nav-flex-wrap: wrap
+  --slide-nav-justify-content: flex-end
+  --slide-nav-align-items: center
+
+  --page-marker-margin: 0 var(--slide-viewer-ui-spacing,#{$slide_viewer_ui_spacing}) 0 0
+
+
+  // Sequential Slider Nav (next/previous)
+
+  --sequential-nav-top: var(--slide-viewer-padding,#{$slide_viewer_padding})
+  --sequential-nav-bottom: auto
+  --sequential-nav-left: auto
+  --sequential-nav-right: var(--slide-viewer-padding,#{$slide_viewer_padding})
+  --sequential-nav-justify-content: flex-end
+  --sequential-nav-align-items: center
+
+  --sequential-control-spacing: var(--slide-viewer-padding,#{$slide_viewer_padding})
+
+  // Nav Opacity
+
+  --sequential-control-initial-opacity: 0.7
+  --sequential-control-slide-hover-opacity: 0.7
+  --sequential-control-hover-opacity: 1
+
+  // Adjust slide viewer active area
+
+  $nav_clearance: ($slide_viewer_padding * 2) + $page_marker_width
+
+  --slide-viewer-nav-clearance: #{$nav_clearance} 0 0 0

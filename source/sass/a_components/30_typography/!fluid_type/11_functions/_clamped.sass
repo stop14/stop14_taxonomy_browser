@@ -1,0 +1,36 @@
+/**
+ * @file clamped.sass
+ * @group 20_typography
+ * @component fluid_type
+ *
+ * An implementation of this brilliant approach to fluid type: https://www.aleksandrhovhannisyan.com/blog/fluid-type-scale-with-css-clamp/
+ * With appreciation and thanks!
+ */
+
+@use 'sass:math'
+
+@function to-rems($px)
+  $rems: math.div($px, 16px) * 1rem
+  @return $rems
+
+// Clamp function that takes rv values and set breakpoints as arguments
+
+@function clamped($min-factor, $max-factor, $min-bp: $default-min-bp, $max-bp: $default-max-bp)
+  $min-px: convert(font-value($min-factor),'px')
+  $max-px: convert(font-value($max-factor),'px')
+  $min-bp-value: convert(map-get($breakpoints,$min-bp),'px')
+  $max-bp-value: convert(map-get($breakpoints,$max-bp),'px')
+  $slope: math.div($max-px - $min-px, $max-bp-value - $min-bp-value)
+  $slope-vw: rnd($slope * 100, 2)
+  $intercept-rems: rnd(to-rems($min-px - $slope * $min-bp-value), 2)
+  @return clamp(#{font-value($min-factor)}, calc(#{$slope-vw}vw + #{$intercept-rems}), #{font-value($max-factor)})
+
+// Clamp function that takes raw pixel values as arguments
+
+@function clamped-px($min-px, $max-px, $min-bp: $default-min-bp, $max-bp: $default-max-bp)
+  $slope: math.div($max-px - $min-px, $max-bp - $min-bp)
+  $slope-vw: $slope * 100
+  $intercept-rems: to-rems($min-px - $slope * $min-bp)
+  $min-rems: to-rems($min-px)
+  $max-rems: to-rems($max-px)
+  @return clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems})

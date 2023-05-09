@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Slide Viewer Template 3.
+ *
+ * See accompanying schematics.
+ *
+ */
+
+=slide-viewer-template-3()
+  // Pagination slider nav
+  --slide-nav-bottom: var(--slide-viewer-padding,#{$slide_viewer_padding})
+  --slide-nav-top: auto
+  --slide-nav-left: auto
+  --slide-nav-right: calc(var(--slide-viewer-padding,#{$slide_viewer_padding}) + (var(--page-marker-width,#{$page_marker_width}) * 2) + (var(--slide-viewer-ui-spacing,#{$slide_viewer_ui_spacing}) * 2))
+  --slide-nav-flex-direction: row
+  --slide-nav-flex-wrap: wrap
+  --slide-nav-justify-content: flex-end
+  --slide-nav-align-items: center
+
+  --page-marker-margin: 0 var(--slide-viewer-ui-spacing,#{$slide_viewer_ui_spacing}) 0 0
+
+
+  // Sequential Slider Nav (next/previous)
+
+  --sequential-nav-top: auto
+  --sequential-nav-bottom: var(--slide-viewer-padding,#{$slide_viewer_padding})
+  --sequential-nav-left: auto
+  --sequential-nav-right: var(--slide-viewer-padding,#{$slide_viewer_padding})
+  --sequential-nav-justify-content: flex-end
+  --sequential-nav-align-items: center
+
+  --sequential-control-spacing: var(--slide-viewer-padding,#{$slide_viewer_padding})
+
+  // Nav Opacity
+
+  --sequential-control-initial-opacity: 0.7
+  --sequential-control-slide-hover-opacity: 0.7
+  --sequential-control-hover-opacity: 1
+
+  // Adjust slide viewer active area
+
+  $nav_clearance: ($slide_viewer_padding * 2) + $page_marker_width
+
+  --slide-viewer-nav-clearance: 0 0 #{$nav_clearance} 0

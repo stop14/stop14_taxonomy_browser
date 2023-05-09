@@ -1,0 +1,13 @@
+stop14_taxonomy_browser.entries_by_topics_page:
+  title: 'SGSE: Entries by Topics (For review)'
+  route_name: stop14_taxonomy_browser.taxonomy_viewer
+  base_route: system.admin_content
+  route_parameters: {rendertype: 'static'}
+  weight: 11
+
+stop14_taxonomy_browser.entries_by_topics_page_dynamic:
+  title: 'SGSE: Entries by Topics (Under development)'
+  route_name: stop14_taxonomy_browser.taxonomy_viewer
+  base_route: system.admin_content
+  route_parameters: {rendertype: 'dynamic'}
+  weight: 12

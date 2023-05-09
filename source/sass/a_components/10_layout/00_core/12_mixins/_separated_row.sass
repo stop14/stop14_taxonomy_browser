@@ -1,0 +1,33 @@
+/* 
+   @file _separated_row.sass 
+   @category 10_layout
+   @component 00_core
+   @description  Mixin to create a rudimentary grid. $wrap and $rows are legacy parameters.  */
+
+=separated_row($columns: 4, $separator: -3, $row_rule: 0px, $row_rule_color: neutral(40))  
+  $coldef: ""
+  
+  @for $i from 1 through $columns
+    $coldef: $coldef + " 1fr"
+  
+  display: grid
+  grid-template-columns: #{$coldef}
+  grid-column-gap: rv($separator)
+  grid-row-gap: rv($separator)
+  position: relative
+  
+  > *:nth-child(1n)
+    
+    &:before
+      content: unset
+      
+  @if $row_rule != 0px
+  
+    > *:nth-child(#{$columns}n + 1)
+    
+      &:before
+        content: ''
+        position: absolute
+        width: 100%
+        height: $row_rule
+        background-color: $row_rule_color

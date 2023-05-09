@@ -1,0 +1,13 @@
+# Custom module library for general purposes.
+taxonomy_browser:
+  js:
+    assets/js/default.js: {}
+
+  css:
+    component:
+      assets/css/style.min.css: {}
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery
+    - core/once

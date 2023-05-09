@@ -1,0 +1,119 @@
+/*
+   @component 60_site_elements/slide_viewer
+   @file _slide_viewer_component.sass
+   @description  Sets global variables for the slide viewer and slide items. These variables
+     are then used by the <slide-viewer> and <slide-item> web components for styling
+   */
+%slide-viewer
+  --slide-viewer-background: #{$slide_viewer_background}
+
+  --slide-nav-bottom: #{$slide_nav_bottom}
+  --slide-nav-top: #{$slide_nav_top}
+  --slide-nav-left: #{$slide_nav_left}
+  --slide-nav-right: #{$slide_nav_right}
+  --slide-nav-flex-direction: #{$slide_nav_flex_direction}
+  --slide-nav-flex-wrap:  #{$slide_nav_flex_wrap}
+  --slide-nav-justify-contents: #{$slide_nav_justify_contents}
+  --slide-nav-align-items:  #{$slide_nav_align_items}
+  --slide-nav-height: #{$slide_nav_height}
+
+  --sequential-nav-top: #{$sequential_nav_top}
+  --sequential-nav-bottom: #{$sequential_nav_bottom}
+  --sequential-nav-left: #{$sequential_nav_left}
+  --sequential-nav-right: #{$sequential_nav_right}
+  --sequential-nav-justify-content: #{$sequential_nav_justify_content}
+  --sequential-nav-align-items:  #{$sequential_nav_align_items}
+
+  --sequential-control-spacing: #{$sequential_control_spacing}
+  --sequential-control-btn-height: #{$sequential_control_btn_height}
+  --sequential-control-btn-width:  #{$sequential_control_btn_width}
+
+  --next-btn-background: #{$next_btn_background}
+  --previous-btn-background: #{$previous_btn_background}
+
+  --page-marker-width: #{$page_marker_width}
+  --page-marker-height: #{$page_marker_height}
+  --page-marker-border-radius: #{$page_marker_border_radius}
+  --page-marker-background:  #{$page_marker_background}
+  --page-marker-margin:  #{$page_marker_margin}
+
+  --page-marker-background-hover:  #{$page_marker_background_hover}
+  --page-marker-transform-hover: #{$page_marker_transform_hover}
+
+  --page-marker-background-active:  #{$page_marker_background_active}
+  --page-marker-transform-active: #{$page_marker_transform_active}
+
+%slide-item
+  --slide-item-content-width: #{$slide_item_content_width}
+  --slide-item-caption-width: #{$slide_item_caption_width}
+
+  --slide-content-background: #{$slide_content_background}
+  --slide-caption-background: #{$slide_caption_background}
+
+  --slide-item-slide-display:  #{$slide_item_slide_display}
+  --slide-item-slide-flex-direction: #{$slide_item_slide_flex_direction}
+  --slide-item-slide-flex-grow:  #{$slide_item_slide_flex-grow}
+  --slide-item-slide-width: #{$slide_item_slide_width}
+  --slide-item-slide-height:  #{$slide_item_slide_height}
+
+  --slide-item-slide-padding: #{$slide_item_slide_padding}
+  --slide-item-slide-margin: #{$slide_item_slide_margin}
+  --slide-item-content-padding: #{$slide_item_content_padding}
+
+  --slide-item-caption-padding: #{$slide_item_caption_padding}
+  --slide-item-caption-height: #{$slide_item_caption_height}
+  --slide-item-caption-position: #{$slide_item_caption_position}
+  --slide-item-caption-bottom: #{$slide_item_caption_bottom}
+
+  --slide-item-portrait-object-fit: #{$slide_item_portrait_object_fit}
+  --slide-item-portrait-position:  #{$slide_item_portrait_position}
+  --slide-item-portrait-slide-padding: #{$slide_item_portrait_slide_padding}
+
+  --slide-item-landscape-object-fit:  #{$slide_item_landscape_object_fit}
+  --slide-item-landscape-position: #{$slide_item_landscape_position}
+  --slide-item-landscape-slide-padding:  #{$slide_item_landscape_slide_padding}
+
+  --slide-item-square-object-fit:  #{$slide_item_square_object_fit}
+  --slide-item-square-position: #{$slide_item_square_position}
+  --slide-item-square-slide-padding:  #{$slide_item_square_slide_padding}
+
+
+// These are ugly, but you can't call mixins dynamically (using interpolation)
+// and refactoring using @extend has unexpected effects due to load order.
+// New templates must be registered here using this grim syntax.
+
+=slide-item-template($template)
+  @if $template == 1
+    +slide-item-template-1()
+  @else if $template == 2
+    +slide-item-template-2()
+  @else if $template == 3
+    +slide-item-template-3()
+  @else if $template == 4
+    +slide-item-template-4()
+  @else if $template == 5
+    +slide-item-template-5()
+  @else if $template == 6
+    +slide-item-template-6()
+
+=slide-viewer-template($template)
+  @if $template == 1
+    +slide-viewer-template-1()
+  @else if $template == 2
+    +slide-viewer-template-2()
+  @else if $template == 3
+    +slide-viewer-template-3()
+  @else if $template == 4
+    +slide-viewer-template-4()
+  @else if $template == 5
+    +slide-viewer-template-5()
+
+:root
+  @extend %slide-item
+  @extend %slide-viewer
+
+  @if $default_slide_viewer_template != 1
+    +slide-viewer-template($default_slide_viewer_template)
+
+  @if $default_slide_item_template != 1
+    +slide-item-template($default_slide_item_template)
