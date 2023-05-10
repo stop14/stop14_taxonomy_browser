@@ -1,13 +1,9 @@
 {
     "name": "stop14/stop14_taxonomy_browser",
     "description": "A Drupal module that provides a REST endpoint and user interface for ",
+    "type": "drupal-module",
     "require": {
         "php": ">=7.4"
     },
-    "license": "MIT",
-    "extra": {
-    "installer-paths": {
-        "modules/contrib/{$name}": ["type:drupal-module"]
-      }
-    }
+    "license": "MIT"
 }
